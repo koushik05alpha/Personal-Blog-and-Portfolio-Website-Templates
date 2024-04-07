@@ -1,0 +1,275 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     scroll-behavior: smooth;
+}
+
+/*------------------- header & top area ---------------------*/
+
+/*---------------- siderbar ---------------------*/
+
+.sidebar{
+    color: #fff;
+}
+
+.requestShiftLabel {
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.5s ease-in-out 0s;
+}
+
+.sidebar a:hover .requestShiftLabel {
+    width: 150px;
+}
+  
+.btn-expandable-one {
+    border-radius: 50px;
+    position: absolute;
+    right: 0;
+    top: 20%;
+}
+
+.btn-expandable-two{
+    border-radius: 50px;
+    position: absolute;
+    right: 0;
+    top: 30%;
+}
+
+.btn-expandable-three {
+    border-radius: 50px;
+    position: absolute;
+    right: 0;
+    top: 40%;
+}
+
+.btn-expandable-four{
+    border-radius: 50px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+.btn-expandable-five {
+    border-radius: 50px;
+    position: absolute;
+    right: 0;
+    top: 60%;
+}
+
+/*---------------- siderbar end ---------------------*/
+
+.top-bannar{  
+     width: 100%; 
+     height: 100vh;
+     background-image: url("../img/IMG_20200922_205754.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+
+.logo{
+     font-size: 5rem;
+     font-family: 'La Belle Aurore', cursive;
+}
+
+.packet-one{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.my-br{
+     width: 1px;
+     height: 120px;
+     border: 2px solid #111;
+     margin: 0 auto;
+}
+
+.icon-one i{
+     padding: 15px 20px;
+     font-size: 2rem;
+}
+
+.summary{
+     padding: 40px;
+}
+
+.summary h1{
+     font-size: 3rem;
+     font-family: 'Courgette', cursive;
+}
+
+.summary p{
+     font-size: 1.8rem;
+     font-family: 'La Belle Aurore', cursive;
+     color: #111;
+}
+
+.packet-two{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.light_three{
+     position: absolute;
+     top: 80%;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-family: cursive;
+ }
+ 
+ .light_three a{
+     position: relative;
+     display: inline-block;
+     padding: 15px 30px;
+     color: #111;
+     text-transform: uppercase;
+     letter-spacing: 4px;
+     text-decoration: none;
+     font-size: 24px;
+     overflow: hidden;
+     transition: 0.2s;
+ }
+ 
+ .light_three a:hover{
+     color: #fff;
+     background: #111;
+     box-shadow: 0 0 10px #111 , 0 0 40px #111 , 0 0 80px #111 ;
+     transition-delay:1s ;
+ }*
+ 
+ .light_three a span{
+     position: absolute;
+     display: block;
+ }
+ 
+ .light_three a span:nth-child(1){
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 2px;
+     background: linear-gradient(90deg,transparent,#111);
+ }
+ 
+ .light_three a:hover span:nth-child(1){
+     left: 100%;
+     transition: 1s;
+ }
+ 
+ .light_three a span:nth-child(3){
+     bottom: 0;
+     right: -100%;
+     width: 100%;
+     height: 2px;
+     background: linear-gradient(270deg,transparent,#111);
+ }
+ 
+ .light_three a:hover span:nth-child(3){
+     right: 100%;
+     transition: 1s;
+     transition-delay:0.5s ;
+ }
+ 
+ .light_three a span:nth-child(2){
+     top: -100%;
+     right: 0;
+     width: 2px;
+     height: 100%;
+     background: linear-gradient(180deg,transparent,#111);
+ }
+ 
+ .light_three a:hover span:nth-child(2){
+     top: 100%;
+     transition: 1s;
+     transition-delay:0.25s ;
+ }
+ 
+ .light_three a span:nth-child(4){
+     bottom: -100%;
+     left:  0;
+     width: 2px;
+     height: 100%;
+     background: linear-gradient(360deg,transparent,#111);
+ }
+ 
+ .light_three a:hover span:nth-child(4){
+     bottom: 100%;
+     transition: 1s;
+     transition-delay:0.75s ;
+ }
+
+/*------------------- header & top area end ---------------------*/
+
+ section{
+      padding: 100px 0px;
+ }
+
+ .can-do i{
+     font-size: 5rem;
+ }
+
+ .my-br-one{
+     width: 100px;
+     height: 1px;
+     border: 2px solid #111;
+     margin: 0 auto;
+ }
+
+ /*===========================================*/
+
+#second {
+     height: 300px;
+     background-image: url("../img/istockphoto-639282412-612x612.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+ }
+
+ /*===========================================*/
+
+.about span{
+    font-size: 1.5rem;
+}
+
+footer{
+    background: #000000;
+    color: #fff;
+    height: 120px;
+}
+
+.icon-two i{
+    font-size: 2rem;
+    padding: 5px 20px;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .summary p{
+        font-size: 25px;
+    }
+
+    .summary h1{
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .summary p{
+        font-size: 25px;
+    }
+
+    .summary h1{
+        font-size: 45px;
+    }
+
+    .light_three{
+        top: 70%;
+    }
+}
