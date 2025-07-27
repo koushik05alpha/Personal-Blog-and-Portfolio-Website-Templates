@@ -1,36 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Templet</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects Portfolio</title>
 
-    <div class="head">
-        <h1>Web Template</h1>
-    </div>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+        color: #333;
+      }
 
-    <div class="containar">
-       
-        <a class="project" href="./Expertm5/demo-blocks.html" target="_blank">Expertm5</a>
-        <a class="project" href="./Meet-Me/index.html" target="_blank">Meet-Me</a>
-        <a class="project" href="./MeetUp/index.html" target="_blank">MeetUp</a>
-        <a class="project" href="./Melan/index.html" target="_blank">Melan</a>
-        <a class="project" href="./Personal Blog/index.html" target="_blank">Personal Blog</a>
-        <a class="project" href="./Protfolio and Blog/index.html" target="_blank">Protfolio and Blog</a>
-        <a class="project" href="./Eccentric Portfolio/index.html" target="_blank">Eccentric Portfolio</a>
-        <a class="project" href="./Portfolio Website 01/index.html" target="_blank">Portfolio Website 01</a>
-        <a class="project" href="./Portfolio Website 02/index.html" target="_blank">Portfolio Website 02</a>
-        <a class="project" href="./Portfolio Website 03/index.html" target="_blank">Portfolio Website 03</a>
-        <a class="project" href="./Portfolio Website 04/index.html" target="_blank">Portfolio Website 04</a>
-        <a class="project" href="./Portfolio Website 05/index.html" target="_blank">Portfolio Website 05</a>
-        <a class="project" href="./Portfolio Website 06/index.html" target="_blank">Portfolio Website 06</a>
-        <a class="project" href="./Portfolio Website 07/Index.html" target="_blank">Portfolio Website 07</a>
-        <a class="project" href="" target="_blank"></a>
-        
-    </div>
-    
-</body>
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card-image {
+        width: 100%;
+        display: block;
+        height: 0;
+        padding-bottom: 66.66%;
+        background-size: cover;
+        background-position: center;
+        border-bottom: 1px solid #eee;
+      }
+
+      .card-image:not([style*="background-image"]) {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .card-title {
+        font-size: 1.4em;
+        margin: 15px 15px 10px;
+        color: #0056b3;
+      }
+
+      .card-description {
+        font-size: 0.95em;
+        margin: 0 15px 15px;
+        color: #666;
+        flex-grow: 1;
+      }
+
+      .card-button {
+        display: block;
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        padding: 12px 15px;
+        text-decoration: none;
+        border-radius: 0 0 8px 8px;
+        transition: background-color 0.3s ease;
+        margin-top: auto;
+      }
+
+      .card-button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-grid" id="cardContainer"></div>
+
+    <script>
+      const cardData = [
+        {
+          imageSrc: "Eccentric Portfolio/Screenshot.png",
+          title: "Eccentric Portfolio",
+          description: "A project from the Eccentric Portfolio folder.",
+          link: "./Eccentric Portfolio/index.html",
+        },
+        {
+          imageSrc: "Expertm5/Screenshot.png",
+          title: "Expertm5",
+          description: "A project from the Expertm5 folder.",
+          link: "./Expertm5/demo-blocks.html",
+        },
+        {
+          imageSrc: "Meet-Me/Screenshot.png",
+          title: "Meet-Me",
+          description: "A project from the Meet-Me folder.",
+          link: "./Meet-Me/index.html",
+        },
+        {
+          imageSrc: "MeetUp/Screenshot.png",
+          title: "MeetUp",
+          description: "A project from the MeetUp folder.",
+          link: "./MeetUp/index.html",
+        },
+        {
+          imageSrc: "Melan/Screenshot.png",
+          title: "Milan",
+          description: "A project from the Milan folder.",
+          link: "./Melan/index.html",
+        },
+        {
+          imageSrc: "Personal Blog/Screenshot.png",
+          title: "Personal Blog",
+          description: "A project from the Personal Blog folder.",
+          link: "./Personal Blog/index.html",
+        },
+        {
+          imageSrc: "Portfolio Website 01/Screenshot.png",
+          title: "Portfolio Website 01",
+          description: "A project from the Portfolio Website 01 folder.",
+          link: "./Portfolio Website 01/index.html",
+        },
+        {
+          imageSrc: "Portfolio Website 02/Screenshot.png",
+          title: "Portfolio Website 02",
+          description: "A project from the Portfolio Website 02 folder.",
+          link: "./Portfolio Website 02/index.html",
+        },
+        {
+          imageSrc: "Portfolio Website 03/Screenshot.png",
+          title: "Portfolio Website 03",
+          description: "A project from the Portfolio Website 03 folder.",
+          link: "./Portfolio Website 03/index.html",
+        },
+        {
+          imageSrc: "Portfolio Website 04/Screenshot.png",
+          title: "Portfolio Website 04",
+          description: "A project from the Portfolio Website 04 folder.",
+          link: "./Portfolio Website 04/index.html",
+        },
+        {
+          imageSrc: "Portfolio Website 05/Screenshot.png",
+          title: "Portfolio Website 05",
+          description: "A project from the Portfolio Website 05 folder.",
+          link: "./Portfolio Website 05/index.html",
+        },
+        {
+          imageSrc: "Portfolio Website 06/Screenshot.png",
+          title: "Portfolio Website 06",
+          description: "A project from the Portfolio Website 06 folder.",
+          link: "./Portfolio Website 06/index.html",
+        },
+        {
+          imageSrc: "Portfolio Website 07/Screenshot.png",
+          title: "Portfolio Website 07",
+          description: "A project from the Portfolio Website 07 folder.",
+          link: "./Portfolio Website 07/index.html",
+        },
+      ];
+
+      const cardContainer = document.getElementById("cardContainer");
+
+      function createCard(data) {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        const imgContainer = document.createElement("div");
+        imgContainer.classList.add("card-image");
+        imgContainer.style.backgroundImage = `url('${data.imageSrc}')`;
+
+        const title = document.createElement("h3");
+        title.classList.add("card-title");
+        title.textContent = data.title;
+
+        const description = document.createElement("p");
+        description.classList.add("card-description");
+        description.textContent = data.description;
+
+        const button = document.createElement("a");
+        button.href = data.link;
+        button.classList.add("card-button");
+        button.textContent = "Show Project";
+        button.target = "_blank";
+        button.rel = "noopener noreferrer";
+
+        card.appendChild(imgContainer);
+        card.appendChild(title);
+        card.appendChild(description);
+        card.appendChild(button);
+
+        return card;
+      }
+
+      cardData.forEach((data) => {
+        const newCard = createCard(data);
+        cardContainer.appendChild(newCard);
+      });
+    </script>
+  </body>
 </html>
